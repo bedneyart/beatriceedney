@@ -44,20 +44,7 @@ const ENQUIRE_EMAIL = "";
 
 // ---- ARTWORKS (gallery order = order in this list) ----
 const ARTWORKS = [
-{
-    id: "abstract-black-orange-aug26",
-    title: "Abstract in Black & Orange",
-    year: "2026",
-    technique: "Inks & Collage",
-    size: "21 x 15 cm",
-    description: "",
-    price: "",
-    sold: false,
-    image: "images/abstract-black-orange-aug26.jpg",
-    alt: "",
-    closeups: [],
-    scale: ""
-  },
+
   {
     id: "green-lake",
     title: "Green Lake",
@@ -67,7 +54,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/greenlake.jpg",
+    image: "images/green-lake.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -82,7 +69,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: true,
-    image: "images/REDLAKE.jpg",
+    image: "images/red-lake.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -111,8 +98,8 @@ const ARTWORKS = [
     size: "A4",
     description: "",
     price: "",
-    sold: true,
-    image: "images/apocalypsenow.jpg",
+    sold: false,
+    image: "images/apocalypse-now.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -127,7 +114,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/cycles1.jpg",
+    image: "images/cycles-1.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -142,7 +129,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/abstractwithbluecollage.jpg",
+    image: "images/abstract-with-blue-collage.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -187,7 +174,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/cycles2.jpg",
+    image: "images/cycles-2.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -202,7 +189,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/canalviews.jpg",
+    image: "images/canal-views.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -278,6 +265,201 @@ const ARTWORKS = [
     price: "",
     sold: false,
     image: "images/night-vision.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "abstract-black-orange-aug26",
+    title: "Abstract in Black & Orange",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "21 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/abstract-black-orange-aug26.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "canal-views-purple",
+    title: "Canal Views in Purple",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/canal-views-purple.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "abstract-yellow-black",
+    title: "Hot City",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/abstract-yellow-black.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "belgian-coast",
+    title: "Belgian Coast",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/belgian-coast.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "full-moon",
+    title: "Full Moon",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/full-moon.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "promise",
+    title: "Promise",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/promise.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "holiday",
+    title: "Holiday",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/holiday.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "fall",
+    title: "Fall",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/fall.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "starrynight",
+    title: "Starry Night",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/starrynight.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "abstract-blue-orange",
+    title: "Abstract in Blue & Orange",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/abstract-blue-orange.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "summer-in-city",
+    title: "Summer in the City",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/summer-in-city.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "horizon",
+    title: "Horizon",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/horizon.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "spiralling",
+    title: "Spiralling",
+    year: "2026",
+    technique: "Inks & Collages",
+    size: "22 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/spiralling.jpg",
     alt: "",
     closeups: [],
     scale: ""
