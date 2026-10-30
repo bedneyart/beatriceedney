@@ -68,7 +68,7 @@ const ARTWORKS = [
     size: "30 x 24 cm",
     description: "",
     price: "",
-    sold: false,
+    sold: true,
     image: "images/REDLAKE.jpg",
     alt: "",
     closeups: [],
