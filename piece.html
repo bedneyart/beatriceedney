@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work — Bea Edney</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class='logo' href='/'>Bea Edney</a>
+            <ul class="nav-links">
+                <li><a href='/work'>Work</a></li>
+                <li><a href='/statement'>Statement</a></li>
+                <li><a href='/bio'>Bio</a></li>
+                <li><a href='/cv'>CV</a></li>
+                <li><a href='/press'>Press</a></li>
+                <li><a href='/contact'>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- This page is filled automatically from artworks.js -->
+        <section class="piece-section" id="piece"></section>
+        <noscript><p>Please enable JavaScript to see this page.</p></noscript>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bea Edney</p>
+    </footer>
+
+    <script src="artworks.js"></script>
+    <script>
+        (function () {
+            var box = document.getElementById("piece");
+            var id = new URLSearchParams(window.location.search).get("id");
+            var a = ARTWORKS.find(function (x) { return x.id === id; });
+            var back = '<p class="back-link"><a href="/work">&larr; Back to the gallery</a></p>';
+
+            // Piece not found
+            if (!a) {
+                box.innerHTML = back + '<p>Sorry, this piece could not be found.</p>';
+                return;
+            }
+
+            document.title = a.title + " — Bea Edney";
+
+            // Sold pieces have no detail page
+            if (a.sold) {
+                box.innerHTML = back +
+                    '<h1>' + escapeHTML(a.title) + '</h1>' +
+                    '<p class="sold-label"><span class="sold-dot" aria-hidden="true"></span>This piece has been sold.</p>' +
+                    '<p><a href="/work">See available work</a></p>';
+                return;
+            }
+
+            // Facts list
+            var facts = [["Year", a.year], ["Technique", a.technique], ["Size", a.size], ["Price", a.price]]
+                .filter(function (f) { return f[1]; })
+                .map(function (f) { return '<dt>' + f[0] + '</dt><dd>' + escapeHTML(f[1]) + '</dd>'; })
+                .join("");
+
+            // Enquire link
+            var subject = encodeURIComponent("Enquiry: " + a.title + (a.year ? " (" + a.year + ")" : ""));
+            var enquireHref = ENQUIRE_EMAIL ? "mailto:" + ENQUIRE_EMAIL + "?subject=" + subject : "/contact";
+
+            // Image that opens full size in a new tab when clicked
+            function zoomable(src, alt) {
+                return '<a href="' + escapeHTML(src) + '" target="_blank" rel="noopener">' +
+                       '<img src="' + escapeHTML(src) + '" alt="' + escapeHTML(alt) + '" loading="lazy"></a>';
+            }
+
+            var html = back +
+                '<div class="piece-main">' +
+                    '<div class="piece-image">' + zoomable(a.image, altText(a)) + '</div>' +
+                    '<div class="piece-info">' +
+                        '<h1>' + escapeHTML(a.title) + '</h1>' +
+                        (facts ? '<dl class="piece-facts">' + facts + '</dl>' : '') +
+                        (a.description ? '<p class="piece-description">' + escapeHTML(a.description) + '</p>' : '') +
+                        '<a class="enquire-button" href="' + escapeHTML(enquireHref) + '">Enquire about this piece</a>' +
+                    '</div>' +
+                '</div>';
+
+            if (a.closeups && a.closeups.length) {
+                html += '<div class="piece-extra"><h2>Details</h2><div class="closeups">' +
+                    a.closeups.map(function (src, i) {
+                        return zoomable(src, a.title + ", close-up " + (i + 1));
+                    }).join("") +
+                    '</div></div>';
+            }
+
+            if (a.scale) {
+                html += '<div class="piece-extra"><h2>Scale</h2><div class="scale">' +
+                    zoomable(a.scale, a.title + ", shown to give a sense of scale") +
+                    '</div></div>';
+            }
+
+            html += '<p class="caption">Click any image to see it full size.</p>';
+            box.innerHTML = html;
+        })();
+    </script>
+</body>
+</html>
