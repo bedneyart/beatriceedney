@@ -435,3 +435,111 @@ footer {
         text-align: center;
     }
 }
+/* =====================================================
+   ADD EVERYTHING BELOW TO THE END OF YOUR style.css
+   ===================================================== */
+
+/* ---- Gallery: clickable pieces ---- */
+a.gallery-item {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+a.gallery-item img {
+    transition: opacity 0.2s ease;
+}
+a.gallery-item:hover img {
+    opacity: 0.85;
+}
+
+/* ---- Red dot for sold pieces ---- */
+.sold-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 0.85em;
+    margin-top: 0.25em;
+}
+.sold-dot {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    background: #c0392b;
+}
+
+/* ---- Detail page ---- */
+.piece-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+}
+.back-link {
+    margin-bottom: 1.5rem;
+}
+.back-link a {
+    color: inherit;
+}
+.piece-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+@media (min-width: 800px) {
+    .piece-main {
+        grid-template-columns: 3fr 2fr;
+        align-items: start;
+    }
+}
+.piece-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.piece-info h1 {
+    margin-top: 0;
+}
+.piece-facts {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.4rem 1rem;
+    margin: 1rem 0;
+}
+.piece-facts dt {
+    font-weight: 600;
+}
+.piece-facts dd {
+    margin: 0;
+}
+.piece-description {
+    line-height: 1.6;
+}
+.enquire-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75em 1.5em;
+    border: 1px solid currentColor;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+.enquire-button:hover {
+    opacity: 0.7;
+}
+.piece-extra {
+    margin-top: 3rem;
+}
+.closeups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+.scale {
+    max-width: 700px;
+}
+.caption {
+    margin-top: 2rem;
+    font-size: 0.85em;
+    opacity: 0.7;
+}
