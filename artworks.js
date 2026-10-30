@@ -44,7 +44,20 @@ const ENQUIRE_EMAIL = "";
 
 // ---- ARTWORKS (gallery order = order in this list) ----
 const ARTWORKS = [
-
+{
+    id: "abstract-black-orange-aug26",
+    title: "Abstract in Black & Orange",
+    year: "2026",
+    technique: "Inks & Collage",
+    size: "21 x 15 cm",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/abstract-black-orange-aug26.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
   {
     id: "green-lake",
     title: "Green Lake",
