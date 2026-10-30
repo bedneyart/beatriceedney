@@ -157,7 +157,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: true,
-    image: "images/marine1.jpg",
+    image: "images/marine.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -202,7 +202,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/print-10.jpg",
+    image: "images/canalviews.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -217,7 +217,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/mirrorlandscape.jpg",
+    image: "images/two-moons.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -247,7 +247,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/Abstract-Green-Red.jpg",
+    image: "images/abstract-green-red.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -262,7 +262,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/Abstract-purple-green.jpg",
+    image: "images/abstract-green-purple.jpg",
     alt: "",
     closeups: [],
     scale: ""
@@ -277,7 +277,7 @@ const ARTWORKS = [
     description: "",
     price: "",
     sold: false,
-    image: "images/night-visions-1.jpg",
+    image: "images/night-vision.jpg",
     alt: "",
     closeups: [],
     scale: ""
