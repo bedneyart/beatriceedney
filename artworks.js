@@ -465,6 +465,81 @@ const ARTWORKS = [
     scale: ""
   },
 
+  {
+    id: "mars",
+    title: "Mars",
+    year: "2026",
+    technique: "Collages & Oils",
+    size: "A4",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/mars.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "abstract-green-orange-red",
+    title: "Abstract in Green & Orange",
+    year: "2026",
+    technique: "Collages & Oils",
+    size: "A4",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/abstract-green-orange-red.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "marine-soft-1",
+    title: "Soft Marine I",
+    year: "2026",
+    technique: "Collages & Oils",
+    size: "A4",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/marine-soft-1.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "marine-soft-2",
+    title: "Soft Marine II",
+    year: "2026",
+    technique: "Collages & Oils",
+    size: "A4",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/marine-soft-2.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
+  {
+    id: "marine-soft-3",
+    title: "Soft Marine III",
+    year: "2026",
+    technique: "Collages & Oils",
+    size: "A4",
+    description: "",
+    price: "",
+    sold: false,
+    image: "images/marine-soft-3.jpg",
+    alt: "",
+    closeups: [],
+    scale: ""
+  },
+
 ];
 
 
