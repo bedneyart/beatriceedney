@@ -576,3 +576,21 @@ a.gallery-item:hover img {
     color: #666;
     margin-top: 0.6em;
 }
+
+/* How buying works page */
+.buying-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+.buying-content ul {
+    padding-left: 1.2rem;
+    line-height: 1.8;
+}
+.buying-content li {
+    margin-bottom: 0.3rem;
+}
+
+/* French version on Bio and Statement */
+.french-version {
+    margin-top: 3rem;
+}
