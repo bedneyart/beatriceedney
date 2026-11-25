@@ -63,8 +63,10 @@
                 .join("");
 
             // Enquire link
-            var subject = encodeURIComponent("Enquiry: " + a.title + (a.year ? " (" + a.year + ")" : ""));
-            var enquireHref = ENQUIRE_EMAIL ? "mailto:" + ENQUIRE_EMAIL + "?subject=" + subject : "/contact";
+            var label = a.title + (a.price ? " (" + a.price + ")" : "");
+            var subject = encodeURIComponent("I'd like to buy: " + label);
+            var body = encodeURIComponent("Hello Bea,\n\nI'd like to buy " + label + ".\n\nMy name:\nShipping country:\n\nThank you!");
+            var enquireHref = ENQUIRE_EMAIL ? "mailto:" + ENQUIRE_EMAIL + "?subject=" + subject + "&body=" + body : "/contact";
 
             // Image that opens full size in a new tab when clicked
             function zoomable(src, alt) {
@@ -79,7 +81,8 @@
                         '<h1>' + escapeHTML(a.title) + '</h1>' +
                         (facts ? '<dl class="piece-facts">' + facts + '</dl>' : '') +
                         (a.description ? '<p class="piece-description">' + escapeHTML(a.description) + '</p>' : '') +
-                        '<a class="enquire-button" href="' + escapeHTML(enquireHref) + '">Enquire about this piece</a>' +
+                        '<a class="enquire-button" href="' + escapeHTML(enquireHref) + '">Buy this print</a>' +
+                        '<p class="buy-note">Questions? Just reply. I answer within 24 hours.</p>' +
                     '</div>' +
                 '</div>';
 
@@ -100,14 +103,14 @@
             html += '<p class="caption">Click any image to see it full size.</p>';
             box.innerHTML = html;
 
-            // Count clicks on the Enquire button in GoatCounter
+            // Count clicks on the Buy button in GoatCounter
             var enquireBtn = box.querySelector(".enquire-button");
             if (enquireBtn) {
                 enquireBtn.addEventListener("click", function () {
                     if (window.goatcounter && window.goatcounter.count) {
                         window.goatcounter.count({
-                            path: "enquire-" + a.id,
-                            title: "Enquire: " + a.title,
+                            path: "buy-" + a.id,
+                            title: "Buy: " + a.title,
                             event: true
                         });
                     }

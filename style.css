@@ -569,3 +569,10 @@ a.gallery-item:hover img {
 }
 @media (max-width: 900px) { .gallery { column-count: 2; } }
 @media (max-width: 550px) { .gallery { column-count: 1; } }
+
+/* Small note under the Buy button */
+.buy-note {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0.6em;
+}
