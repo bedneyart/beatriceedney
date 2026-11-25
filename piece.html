@@ -99,7 +99,22 @@
 
             html += '<p class="caption">Click any image to see it full size.</p>';
             box.innerHTML = html;
+
+            // Count clicks on the Enquire button in GoatCounter
+            var enquireBtn = box.querySelector(".enquire-button");
+            if (enquireBtn) {
+                enquireBtn.addEventListener("click", function () {
+                    if (window.goatcounter && window.goatcounter.count) {
+                        window.goatcounter.count({
+                            path: "enquire-" + a.id,
+                            title: "Enquire: " + a.title,
+                            event: true
+                        });
+                    }
+                });
+            }
         })();
     </script>
+    <script data-goatcounter="https://beatriceedney.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

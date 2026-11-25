@@ -98,7 +98,7 @@ const ARTWORKS = [
     size: "A4",
     description: "",
     price: "",
-    sold: false,
+    sold: true,
     image: "images/apocalypse-now.jpg",
     alt: "",
     closeups: [],
